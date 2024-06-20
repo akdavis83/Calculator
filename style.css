@@ -1,0 +1,91 @@
+body {
+    background: radial-gradient(circle, #22499C, #00277A 50vh);
+    height: 95vh;
+    overflow: auto;
+    display: flex;
+    font-family: 'Saira', sans-serif;
+    color: white;
+}
+
+#calc-container {
+    display: grid;
+    overflow: hidden;
+    background-color: rgb(136, 150, 178);
+    border: 1px solid gainsboro;
+    border-radius: 2%;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 25, 0.2);
+    grid-gap: 2px;
+    margin: auto;
+    height: auto;
+    min-width: 15rem;
+    min-height: 15rem;
+    width: 42vh;
+    grid-template-areas:
+    'screen screen screen screen'
+    'clear clear clear .'
+    '. . . .'
+    '. . . .'
+    '. . . .'
+    'decimal zero zero equals';
+}
+
+.button {
+    background-color:  rgb(45, 73, 129);
+    border: 1px solid rgb(18, 37, 74);
+    padding: 3vh 4vh;
+    text-align: center;
+    user-select: none;
+}
+
+.button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+#screen {
+    grid-area: screen;
+    text-align: center;
+    height: 10vh;
+    padding: 1.5vh;
+    align-self: stretch;
+    justify-self: stretch;
+    background-color: rgb(18, 37, 74);
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+}
+
+#screen h1 {
+    font-size: 3vh;
+    font-weight: normal;
+    float: right;
+}
+
+#clear {
+    grid-area: clear;
+    background-color: rgb(78, 95, 129);
+}
+
+.func {
+    background-color: rgb(46, 70, 109);
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#equals {
+    background-color: rgb(78, 95, 129);
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#equals {
+    grid-area: equals;
+}
+
